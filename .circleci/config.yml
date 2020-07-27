@@ -14,7 +14,11 @@ jobs:
       BUILD_LUNCH: 'omni_RMX1911-eng'
       PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - initial build
+        - *cleaned bc.mk
+        - *added some missing props
+        - *backup system and vendor changes
+        - *updated blobs for a10
+        - *change brand name 
     working_directory: /home/builder/pitchblack
     steps:
       - run:
@@ -33,5 +37,5 @@ workflows:
       - build:
           filters:
             branches:
-              only: 'pbrp'
+              only: 'android-9.0'
           context: org-global
