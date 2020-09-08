@@ -5,29 +5,25 @@ jobs:
       - image: fr3akyphantom/droid-builder:latest
     environment:
       MANIFEST_BRANCH: 'android-9.0'
-      #PBRP_BRANCH: 'pbrp'
-      VERSION: '2.9.1'
-      MAINTAINER: '@hpnightowl'
+      VERSION: '3.0.0'
+      MAINTAINER: 'PBRP Team'
       VENDOR: 'realme'
       CODENAME: 'RMX1911'
       FLAVOR: 'eng'
-      BUILD_LUNCH: 'omni_RMX1911-eng'
       PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - *cleaned bc.mk
-        - *added some missing props
-        - *backup system and vendor changes
-        - *updated blobs for a10
-        - *change brand name 
+        - Bringup 3.0 
+        - Source side changes 
+        - Fully Redesigned UI 
+        - New Android like Power Menu (Activated via power key hold) 
+        - Flashlight toggled by Vol up(+) on hold 
+        - Flashlight toggle on Lockscreen 
+        - Etc.
     working_directory: /home/builder/pitchblack
     steps:
       - run:
           name: AIO Build
           command: |
-            echo "Set GitAuth Infos too"
-            git config --global user.email $GitHubMail
-            git config --global user.name $GitHubName
-            git config --global color.ui true
             wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
             source build.sh
 workflows:
