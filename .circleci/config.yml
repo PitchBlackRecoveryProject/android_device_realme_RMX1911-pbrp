@@ -10,7 +10,8 @@ jobs:
       VENDOR: 'realme'
       CODENAME: 'RMX1911'
       FLAVOR: 'eng'
-      PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
+      # PB_OFFICIAL: 'true'
       CHANGELOG: |
         - Bringup 3.0 
         - Source side changes 
