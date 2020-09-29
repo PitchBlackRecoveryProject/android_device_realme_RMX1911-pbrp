@@ -18,14 +18,14 @@ jobs:
         - New Android like Power Menu (Activated via power key hold) 
         - Flashlight toggled by Vol up(+) on hold 
         - Flashlight toggle on Lockscreen
-       HOT FIX:
-        - Fixed Flashlight
-        - Force use busybox
-        - Disable DM-Verity by default
-        - Renamed External-Device to USB-Storage
-        - Fixed Treble compatibly error
-        - Etc.
-       NOTE: After flashing PBRP recovery navigate to Settings > then click "Restore Defaults" and finally Reboot to recovery. Enjoy !!
+        - HOT FIXES:
+        -  > Fixed Flashlight
+        -  > Force use busybox
+        -  > Disable DM-Verity by default
+        -  > Renamed External-Device to USB-Storage
+        -  > Fixed Treble compatibly error
+        -  > Etc.
+        - NOTE: After flashing PBRP recovery navigate to Settings > then click "Restore Defaults" and finally Reboot to recovery. Enjoy !!
         
     working_directory: /home/builder/pitchblack
     steps:
