@@ -12,20 +12,9 @@ jobs:
       FLAVOR: 'eng'
       PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Bringup 3.0 
-        - Source side changes 
-        - Fully Redesigned UI 
-        - New Android like Power Menu (Activated via power key hold) 
-        - Flashlight toggled by Vol up(+) on hold 
-        - Flashlight toggle on Lockscreen
-        - HOT FIXES:
-        -  > Fixed Flashlight
-        -  > Force use busybox
-        -  > Disable DM-Verity by default
-        -  > Renamed External-Device to USB-Storage
-        -  > Fixed Treble compatibly error
-        -  > Etc.
-        - NOTE: After flashing PBRP recovery navigate to Settings > then click "Restore Defaults" and finally Reboot to recovery. Enjoy !!
+        - Upstream with latest source
+        - Update TWRP base 3.5.0
+        - Disable Patching DM-Verity By Default
         
     working_directory: /home/builder/pitchblack
     steps:
