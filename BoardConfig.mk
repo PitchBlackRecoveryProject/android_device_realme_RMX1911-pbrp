@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX1911
+DEVICE_PATH := device/realme/RMXtrinket
 
 # Architecture
 TARGET_ARCH := arm64
@@ -56,7 +56,7 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := RMX1911
+TARGET_OTA_ASSERT_DEVICE := RMX1911,RMX1925,RMX1927,RMX2030
 
 # Avb
 BOARD_AVB_ENABLE := true

@@ -8,7 +8,7 @@ jobs:
       VERSION: '3.0.0'
       MAINTAINER: 'PBRP Team'
       VENDOR: 'realme'
-      CODENAME: 'RMX1911'
+      CODENAME: 'RMXtrinket'
       FLAVOR: 'eng'
       PB_OFFICIAL: 'true'
       CHANGELOG: |
