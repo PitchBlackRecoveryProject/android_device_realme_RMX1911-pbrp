@@ -10,12 +10,9 @@ jobs:
       VENDOR: 'realme'
       CODENAME: 'RMXtrinket'
       FLAVOR: 'eng'
-      PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
       CHANGELOG: |
-        - Upstream with latest source
-        - Update TWRP base 3.5.0
-        - Disable Patching DM-Verity By Default
-        
+        - Unified Script
     working_directory: /home/builder/pitchblack
     steps:
       - run:
@@ -30,5 +27,5 @@ workflows:
       - build:
           filters:
             branches:
-              only: 'android-9.0'
+              only: 'test'
           context: org-global
