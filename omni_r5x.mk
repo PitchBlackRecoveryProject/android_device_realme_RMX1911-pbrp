@@ -37,5 +37,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model \
     ro.build.product \
-    ro.product.device \
-    ro.product.name
+    ro.product.device
