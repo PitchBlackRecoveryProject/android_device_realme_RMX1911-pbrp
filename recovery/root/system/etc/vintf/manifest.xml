@@ -2,10 +2,8 @@
     Input:
         manifest.xml
         framework_manifest.xml
-        manifest_oplus_commondcs.xml
-        manifest_oplus_orms.xml
 -->
-<manifest version="2.0" type="framework">
+<manifest version="1.0" type="framework">
     <hal format="hidl">
         <name>android.frameworks.displayservice</name>
         <transport>hwbinder</transport>
@@ -15,6 +13,26 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IDisplayService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.frameworks.faceservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFaceHalService</name>
+            <instance>faceservice</instance>
+        </interface>
+        <fqname>@1.0::IFaceHalService/faceservice</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.frameworks.fingerprintservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFingerprintHalService</name>
+            <instance>fingerprintservice</instance>
+        </interface>
+        <fqname>@1.0::IFingerprintHalService/fingerprintservice</fqname>
     </hal>
     <hal format="hidl">
         <name>android.frameworks.schedulerservice</name>
@@ -88,10 +106,31 @@
     </hal>
     <hal format="native">
         <name>netutils-wrapper</name>
+        <transport></transport>
         <version>1.0</version>
     </hal>
     <hal format="hidl">
-        <name>vendor.oplus.hardware.commondcs</name>
+        <name>vendor.oppo.hardware.camera.oppoAlgoProcessService</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOppoAlgoProcessService</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOppoAlgoProcessService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oppo.hardware.camera.oppoHalAssist</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOppoHalAssist</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOppoHalAssist/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oppo.hardware.commondcs</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -101,24 +140,36 @@
         <fqname>@1.0::ICommonDcsHalService/commondcsservice</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oplus.hardware.orms</name>
+        <name>vendor.oppo.hardware.cryptoeng</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IOrmsHalProxy</name>
-            <instance>ORMS_HAL_PROXY</instance>
+            <name>ICryptoeng</name>
+            <instance>default</instance>
         </interface>
-        <fqname>@1.0::IOrmsHalProxy/ORMS_HAL_PROXY</fqname>
+        <fqname>@1.0::ICryptoeng/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.qccsyshal</name>
+        <name>vendor.oppo.hardware.radio.opporadio</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IQccsyshal</name>
-            <instance>qccsyshal</instance>
+            <name>IOppoRadio</name>
+            <instance>oppo_slot1</instance>
+            <instance>oppo_slot2</instance>
         </interface>
-        <fqname>@1.0::IQccsyshal/qccsyshal</fqname>
+        <fqname>@1.0::IOppoRadio/oppo_slot1</fqname>
+        <fqname>@1.0::IOppoRadio/oppo_slot2</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oppo.hardware.storagedevice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IStorageDevice</name>
+            <instance>oppoStor1</instance>
+        </interface>
+        <fqname>@1.0::IStorageDevice/oppoStor1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.atcmdfwd</name>
@@ -131,31 +182,6 @@
         <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.sigma_miracast</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>Isigma_miracast</name>
-            <instance>sigmahal</instance>
-        </interface>
-        <fqname>@1.0::Isigma_miracast/sigmahal</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.systemhelper</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISystemEvent</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ISystemResource</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISystemEvent/default</fqname>
-        <fqname>@1.0::ISystemResource/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.wifi.keystore</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -165,9 +191,11 @@
         </interface>
         <fqname>@1.0::IKeystoreExt/default</fqname>
     </hal>
+    <vendor-ndk>
+        <version>29</version>
+    </vendor-ndk>
     <system-sdk>
         <version>28</version>
         <version>29</version>
-        <version>30</version>
     </system-sdk>
 </manifest>
