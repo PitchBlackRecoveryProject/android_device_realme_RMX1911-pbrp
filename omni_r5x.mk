@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := nicky
+PRODUCT_RELEASE_NAME := r5x
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -23,14 +23,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit from r5x device
+$(call inherit-product, device/realme/r5x/device.mk)
 
-$(call inherit-product, device/oplus/nicky/device.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/pb/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
-PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
-PRODUCT_BRAND := realme
-PRODUCT_MANUFACTURER := realme
-PRODUCT_MODEL := $(PRODUCT_RELEASE_NAME)
+PRODUCT_DEVICE := r5x
+PRODUCT_NAME := omni_r5x
+PRODUCT_BRAND := Realme
+PRODUCT_MODEL := 5/5s/5i/5NFC
+PRODUCT_MANUFACTURER := Realme
