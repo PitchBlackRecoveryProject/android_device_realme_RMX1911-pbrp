@@ -1,0 +1,4 @@
+/cache     ext4     /dev/block/by-name/cache                   flags=display=cache
+/data      ext4     /dev/block/bootdevice/by-name/userdata     flags=display=data
+/data      f2fs     /dev/block/bootdevice/by-name/userdata     flags=display=data
+/misc      emmc     /dev/block/bootdevice/by-name/misc         flags=display=misc
