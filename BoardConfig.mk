@@ -102,7 +102,7 @@ BOARD_R5X_DYNPART_PARTITION_LIST := odm product system system_ext vendor
 #TARGET_RECOVERY_DEVICE_MODULES := libinit_r5x
 
 # System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
 BOARD_SUPPRESS_SECURE_ERASE := true
 
