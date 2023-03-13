@@ -1,8 +1,12 @@
+
 # Android fstab file.
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                 <mnt_point>   <type>  <mnt_flags and options>            <fs_mgr_flags>
+system                                   /system      ext4    ro,barrier=1,discard                wait,avb,logical,first_stage_mount
+vendor                                   /vendor      ext4    ro,barrier=1                        wait,logical,first_stage_mount
+
 /dev/block/bootdevice/by-name/userdata   /data        ext4    noatime,nosuid,noatime,nodev,barrier=1,noauto_da_alloc,discard,lazytime,errors=panic    latemount,wait,check,fileencryption=ice,resize,quota,reservedsize=128M
 /dev/block/bootdevice/by-name/userdata   /data        f2fs    nosuid,nodev,noatime,inline_xattr,data_flush,fsync_mode=nobarrier                       latemount,wait,check,fileencryption=ice,quota
 
