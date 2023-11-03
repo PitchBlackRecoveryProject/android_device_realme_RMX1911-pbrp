@@ -141,6 +141,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/power_supply/battery/temp"
 TW_Y_OFFSET := 43
 TW_H_OFFSET := -43
 TW_NO_SCREEN_BLANK := true
