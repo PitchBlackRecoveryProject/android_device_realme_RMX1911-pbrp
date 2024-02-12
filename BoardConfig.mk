@@ -169,3 +169,6 @@ PB_DISABLE_DEFAULT_DM_VERITY := true
 
 # PB Torch
 PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+
+# VINTF
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
